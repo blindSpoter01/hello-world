@@ -1,0 +1,121 @@
+\documentclass[a4paper]{article}
+%\usepackage{ctex}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{multirow}
+%\setlength{\parskip}{0.0em}
+\renewcommand{\baselinestretch}{1.5} \normalsize
+
+\usepackage{CJK}
+%\usepackage[margin=1in]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{parskip}
+\usepackage{listings}
+\setlength{\parindent}{0em}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{amssymb}
+\begin{document}
+\begin{CJK*}{GBK}{song}
+\title{\textbf{\fontsize{20pt}{\baselineskip}\selectfont 离散数学第四次作业参考答案}}
+\date{}\maketitle
+\section*{Problem 1}
+\begin{multicols}{5}
+\begin{description}
+\item (1) $3 $
+\item (2) $\aleph_0$
+\item (3) $\aleph_0$
+\item (4) $\aleph_0$
+\item (5) $\aleph_0$
+\item (6) $\aleph$
+
+\end{description}
+\end{multicols}
+
+\section*{Problem 2}
+确定下列各集合是否是有限的、可数无限的或不可数的。对那些可数无限集合，给出在自然数集合和该集合之间的一一对应。
+\begin{description}
+\item a) 大于10的整数
+\item b) 奇负整数
+\item c) 绝对值小于1\,000\,000的整数
+\item d) 0和2之间的实数
+\item e) 集合$A\times Z^+$这里$A=\{2,3\}$
+\item f) 10 的整数倍
+\end{description}
+\subsection*{Solution.}
+\begin{description}
+\item (1) 可数无限集，$n\leftrightarrow n+11$。
+\item (2) 可数无限集，$n\leftrightarrow -2n-1$
+\item (3) 有限集。
+\item (4) 不可数集。
+\item (5) 可数无限集。n为奇数，则$n\leftrightarrow (3, \dfrac{n+1}{2})$;n为偶数，则$n\leftrightarrow (2, \dfrac{n}{2}+1)$
+\item (5) 可数无限集，$n\leftrightarrow 10\times (-1)^{n}\times \lfloor \dfrac{n+1}{2}\rfloor$。
+\end{description}
+
+\section*{Problem 3}
+假设$A$是可数集合。证明如果存在一个从$A$到$B$的满射函数$f$，则$B$也是可数的。
+\subsection*{Solution.}
+\begin{description}
+\item (1) $A=\emptyset$且$B=\emptyset$，易证。
+\item (2) $f:A\rightarrow B$是满射函数，易得$card\,A\geq card\,B$，又因为A是可数的，则B为可数的。
+\end{description}
+
+\section*{Problem 4}
+证明：任取8个自然数，必有两个数的差是7的倍数。
+\subsection*{Solution.}
+在与整除有关的问题中有这样的性质，如果两个整数a、b，它们除以自然数m的余数相同，
+那么它们的差a-b是m的倍数。根据这个性质，本题只需证明这8个自然数中有2个自然数，
+它们除以7的余数相同。我们可以把所有自然数按被7除所得的7种不同的余数0、1、2、3、4、5、6分成七类.也就是7个抽屉。
+任取8个自然数，
+根据抽屉原理，必有两个数在同一个抽屉中，也就是它们除以7的余数相同，因此这两个数的差一定是7的倍数。
+
+\section*{Problem 5}
+$\mathcal P (A)=\{\O,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}$，$\{0,1\}^A=\{f_0,f_1,f_2,f_3,f_4,f_5,f_6,f_7 \}$，构造双射函数$f$.\\
+$f(\O)=f_0$，$f(\{a\})=f_1$，$f(\{b\})=f_2$，$f(\{c\})=f_3$，\\
+$f(\{a,b\})=f_4$，$f(\{a,c\})=f_5$，$f(\{b,c\})=f_6$，$f(\{a,b,c\})=f_7$，\\
+根据等势的定义有$\mathcal P(A)\approx \{0,1\}^A$.请注意题意要求等势定义证明.
+
+\section*{Problem 6}
+a) 假。\\
+b) 真。证明：由题设，存在整数$k_1$，$k_2$使得$c=k_1 a,d=k_2 b$，从而有$cd=k_1 k_2 ab$，得证$ab|cd$.\\
+c) 真。证明：存在整数$k$使得$c=k(ab)=(kb)a$，得证$a|c$。\\
+d) 假。
+
+\section*{Problem 7}
+证明：若$n$和$k$为正整数，则有$\lceil n/k\rceil=\lfloor (n-1)/k\rfloor+1$。
+\subsection*{Solution.}
+令$n=ka+b, 0\leq b<a$。
+
+若$b=0$，则$\lceil n/k\rceil=a$，$\lfloor (n-1)/k\rfloor=a-1$. 
+
+若$b\geq 1$，则$\lceil n/k\rceil=a+1$，$\lfloor (n-1)/k\rfloor=a$.
+
+\section*{Problem 8}
+计算：
+\begin{multicols}{3}
+\begin{description}
+\item a) 23300 mod 11
+\item b) $2^{3300}$ mod 31
+\item c) $3^{516}$ mod 7
+\end{description}
+\end{multicols}
+\subsection*{Solution.}
+a)$23300=233*100=(21*11+2)*(9*11+1)\equiv2*1 \equiv2 \pmod {11}=2$
+
+b)$2^{3300}=2^ {5*660}\equiv32^{660}\equiv1^{660}\equiv1 \pmod {31}=1$
+
+c)$3^6\equiv1 \pmod 7, 3^{516}\equiv3^{6*86}\equiv1 \pmod 7=1$
+
+\section*{Problem 9}
+
+设 $n$ 是大于3的素数，$\phi(n)=n-1$. 又 $n+1$是偶数，有$\frac{n-1}{2}$个小于$n+1$的偶数，它们均与$n+1$不互素，故$\phi(n+1)=n-1\leq n-\frac{n-1}{2}=\frac{n+1}{2}=\phi(n)$. 而大于3的素数有无穷多个，证毕.
+
+\section*{Problem 10}
+
+由欧拉定理，$m^\phi(n)\equiv 1(mod~~n)$，即$n|  m^{\phi(n)} -1$. 同理$m|  n^\phi(m) -1$.
+从而，$mn|(m^\phi(n) -1)(n^\phi(m) -1)$，即$mn| m^\phi(n) n^\phi(m) -(m^\phi(n) +n\phi(m) -1)$. 而$mn |  m^\phi(n)  n^\phi(m)$ ，故有$mn|(m^\phi(n) +n^\phi(m) -1$，
+得证$m^\phi(n) +n^\phi(m) \equiv 1(mod~~n)$.
+
+\end{document} 

@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article}
+%\usepackage{ctex}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{multirow}
+%\setlength{\parskip}{0.0em}
+\renewcommand{\baselinestretch}{1.5} \normalsize
+
+\usepackage{CJK}
+%\usepackage[margin=1in]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{parskip}
+\usepackage{listings}
+\setlength{\parindent}{0em}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{CJK*}{GBK}{song}
+\title{\textbf{\fontsize{20pt}{\baselineskip}\selectfont 离散数学作业 Problem set 4}}
+\date{}\maketitle
+\section*{Problem 1}
+计算下列集合的基数.
+\begin{description}
+\item (1) $A=\{x,y,z\} $
+\item (2) $B=\{x|x=n^2\wedge n\in N\}$
+\item (3) $C=\{x|x=n^{109}\wedge n\in N\}$
+\item (4) $B\cap C$
+\item (5) $B\cup C$
+\item (6) 平面上所有的圆心在$x$轴上的单位圆的集合.
+\end{description}
+
+\section*{Problem 2}
+确定下列各集合是否是有限的、可数无限的或不可数的。对那些可数无限集合，给出在自然数集合和该集合之间的一一对应。
+
+\begin{description}
+\item a) 大于10的整数
+\item b) 奇负整数
+\item c) 绝对值小于1\,000\,000的整数
+\item d) 0和2之间的实数
+\item e) 集合$A\times Z^+$这里$A=\{2,3\}$
+\item f) 10 的整数倍
+\end{description}
+
+\section*{Problem 3}
+假设$A$是可数集合。证明如果存在一个从$A$到$B$的满射函数$f$，则$B$也是可数的。
+
+\section*{Problem 4}
+证明：任取8个自然数，必有两个数的差是7的倍数。
+
+\section*{Problem 5}
+设$A=\{a,b,c\}$，$B=\{0,1\}^A$，由定义证明$\mathcal P(A)\approx \{0,1\}^A$.
+
+\section*{Problem 6}
+设$a,b,c,d$均为正整数，下列命题是否为真？若为真，给出证明；否则，给出反例.
+\begin{multicols}{2}
+\begin{description}
+\item a) 若$a \mid c$, $b \mid c$, 则$ab \mid c$.
+\item c) 若$ab \mid c$, 则$a \mid c$.
+\item b) 若$a \mid c$, $b \mid d$, 则$ab \mid cd$.
+\item d) 若$a \mid bc$, 则$a \mid b$或$a \mid c$.
+\end{description}
+\end{multicols}
+
+\section*{Problem 7}
+证明：若$n$和$k$为正整数，则有$\lceil n/k\rceil=\lfloor (n-1)/k\rfloor+1$。
+
+\section*{Problem 8}
+计算：
+\begin{multicols}{3}
+\begin{description}
+\item a) 23300 mod 11
+\item b) $2^{3300}$ mod 31
+\item c) $3^{516}$ mod 7
+\end{description}
+\end{multicols}
+
+\section*{Problem 9}
+证明：存在无穷多个$n$使得$\phi(n)>\phi(n+1)$.
+
+\section*{Problem 10}
+证明：若$m$和$n$互素，则$m^{\phi(n)}+n^{\phi(m)}\equiv$1(mod $mn$).
+
+\end{document} 
